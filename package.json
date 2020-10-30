@@ -1,0 +1,38 @@
+{
+  "name": "refactor-this-js",
+  "version": "0.0.1",
+  "description": "",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/index.js",
+    "start:dev": "nodemon src/index.js",
+    "db:build": "npx knex migrate:latest --esm",
+    "db:drop": "npx knex migrate:rollback --esm",
+    "db:seed": "npx knex seed:run --esm",
+    "test": "jest --runInBand"
+  },
+  "keywords": [],
+  "author": "Maurice Yong <iam@mauriceyong.com>",
+  "license": "MIT",
+  "dependencies": {
+    "celebrate": "^12.2.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "knex": "^0.21.6",
+    "sqlite3": "^5.0.0",
+    "uuid": "^8.3.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.3",
+    "@babel/preset-env": "^7.12.1",
+    "babel-jest": "^26.6.1",
+    "eslint": "^7.12.1",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-plugin-import": "^2.22.1",
+    "jest": "^26.4.2",
+    "nodemon": "^2.0.4",
+    "supertest": "^4.0.2"
+  }
+}
